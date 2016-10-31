@@ -12,11 +12,16 @@ images.sort()
 images.reverse()
 
 
-@app.route("/")
+@app.route('/')
 def index():
-    return render_template('index.html', images=images)
+    return render_template('index.html')
 
-if __name__ == "__main__":
+
+@app.route('/screenshot')
+def screenshot():
+    return render_template('screenshot.html', images=images)
+
+if __name__ == '__main__':
     app.run(debug=True)
 
 
