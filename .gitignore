@@ -96,4 +96,5 @@ ENV/
 .idea/
 *.iml
 config.py
+*.xml
 
