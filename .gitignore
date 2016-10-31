@@ -95,4 +95,5 @@ ENV/
 .gitconfig
 .idea/
 *.iml
+config.py
 
