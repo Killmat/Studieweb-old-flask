@@ -14,12 +14,12 @@ images.reverse()
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('index.html', title='Mathias Thusholt')
 
 
 @app.route('/screenshot')
 def screenshot():
-    return render_template('screenshot.html', images=images)
+    return render_template('screenshot.html', title='Screenshots', images=images)
 
 if __name__ == '__main__':
     app.run(debug=True)
