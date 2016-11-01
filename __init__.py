@@ -11,10 +11,11 @@ images = [f for f in listdir(images_folder) if isfile(join(images_folder, f))]
 images.sort()
 images.reverse()
 
+ipsum = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam a orci nisi. Suspendisse quis tempus leo. Ut luctus nunc lacinia arcu tincidunt sodales. Duis felis massa, mollis eget enim in, porta iaculis arcu. Nam ut arcu auctor, elementum arcu nec, vulputate dolor. Duis mattis pharetra euismod. Quisque interdum nisi quam, id ultrices nibh sagittis ac. Nulla scelerisque molestie lacus, quis interdum leo mattis a. Nunc non nisl lorem.'
 
 @app.route('/')
 def index():
-    return render_template('index.html', title='Mathias Thusholt')
+    return render_template('index.html', title='Mathias Thusholt', ipsum=ipsum)
 
 
 @app.route('/screenshot')

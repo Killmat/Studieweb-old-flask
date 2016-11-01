@@ -3,7 +3,7 @@ footer {
 }
 
 .navbar-brand {
-  padding: 0px;
+  padding: 0;
 }
 
 .navbar-brand>img {
@@ -23,4 +23,10 @@ footer {
 .example3 .navbar-toggle {
   padding: 10px;
   margin: 25px 15px 25px 0;
+}
+
+@media screen and (max-width: 350px) {
+    .navbar-brand {
+        padding: 3px;
+    }
 }
