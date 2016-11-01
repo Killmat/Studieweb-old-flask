@@ -1,1 +1,1 @@
-ss_dir = '/home/mathias/PycharmProjects/Studieweb/static/screenshot'
+ss_dir = '/var/www/Studieweb/Studieweb/static/screenshot'

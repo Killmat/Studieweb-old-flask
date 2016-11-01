@@ -1,5 +1,18 @@
-.marginleft50 {
-    margin-left: 50px;
+.jumbotron > h1 {
+    text-align: center
+    max-width: 60%;
+}
+
+.jumbotron {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(rgba(44,52,80,0.5), rgba(44,62,80,0.5)), url("/static/pics/jumbo-background.jpg");
+    background-size: cover;
+    height: 500px;
+    width: 100%;
+
 }
 
 .navbar {
