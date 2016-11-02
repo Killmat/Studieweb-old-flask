@@ -1,3 +1,7 @@
+body {
+    padding: 0; !important
+}
+
 .jumbotron {
     text-align: center;
     display: flex;
@@ -11,10 +15,6 @@
 
 .navbar {
     margin-bottom: 0px;
-}
-
-#lol {
-    margin-left: -50px;
 }
 
 .thumb {
@@ -42,7 +42,7 @@
 }
 
 /* Mobile */
-@media screen and (max-height: 767px){
+@media (min-width:320px) {
     .jumbotron {
         height: 250px;
     }
@@ -52,7 +52,7 @@
     }
 }
 /* Tablet */
-@media screen and (max-height: 1100px) and (min-height: 768px) {
+@media (min-width:801px) {
     .jumbotron {
         height: 500px;
     }
