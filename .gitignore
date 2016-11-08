@@ -2,6 +2,7 @@
 __pycache__/
 *.py[cod]
 *$py.class
+*.pyc
 
 # C extensions
 *.so
@@ -95,7 +96,6 @@ ENV/
 .gitconfig
 .idea/
 *.iml
-config.py
 *.xml
 .cache/
-static/screenshot
+app/static/screenshot

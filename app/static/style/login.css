@@ -1,0 +1,52 @@
+html, body {
+    height: 100%;
+    background-color: rgba(76, 76, 76, 0.100);
+}
+
+#login {
+    height: 100%;
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    justify-content: center;
+    align-items: center;
+}
+
+#loginform {
+    background-color: #222222;
+    padding: 30px 10px 10px 10px;
+    border: solid 10px;
+    border-radius: 10px;
+    display: block;
+}
+
+img {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+label {
+    color: #696969;
+}
+
+#loginform button {
+    display: block;
+    width: 5em;
+    margin: auto;
+    color: lightgray;
+}
+
+@media (min-width: 200px) {
+    #loginform {
+        width: 300px;
+    }
+}
+
+@media (min-width: 500px) {
+    #loginform {
+        width: 400px;
+    }
+
+}

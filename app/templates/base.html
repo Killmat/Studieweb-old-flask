@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>{{ title }}</title>
+
+        <link href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+        <link href="{{ url_for('static', filename='style/base.css') }}" rel="stylesheet">
+        <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+
+        {% block head %}
+        {% endblock %}
+
+    </head>
+
+    <body>
+        <div class="example3">
+                <nav class="navbar navbar-inverse navbar-fixed-top">
+                    <div class="container">
+                        <!-- Mobile navigation grouped with brand -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar3">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="/"> <img src="{{ url_for('static', filename='pics/banner.png') }}" alt="Mathias Thusholt"/></a>
+                        </div>
+                        <div id="navbar3" class="navbar-collapse collapse">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li class="{{ index_active }}"><a href="/">Hjem</a></li>
+                                <li class="{{ about_active }}"><a href="/about">Om mig</a></li>
+                                <li class="{{ docs_active }}"><a href="/docs">Dokumentation</a></li>
+                                <li><a href="https://www.github.com/Killmat/Studieweb">Github</a></li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Projekter <span class="caret"></span></a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="#">Projekt 1</a></li>
+                                        <li><a href="#">Projekt 2</a></li>
+                                        <li><a href="#">Projekt 3</a></li>
+                                        <li><a href="#">Projekt 4</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="/admin">Admin</a></li>
+                            </ul>
+                        </div>
+                    <!--/.nav-collapse -->
+                    </div>
+                <!--/.container-fluid -->
+                </nav>
+            </div>
+        {% block content %}
+        {% endblock %}
+
+        <hr>
+        <footer>
+            <div class="col-lg-12">
+                <p>Copyright &copy; Mathias Thusholt 2016</p>
+            </div>
+        </footer>
+
+        <script type="text/javascript" src="{{ url_for('static', filename='script/jquery-3.1.1.min.js') }}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='bootstrap/js/bootstrap.min.js') }}"></script>
+    </body>
+</html>

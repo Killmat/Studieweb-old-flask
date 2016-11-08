@@ -1,0 +1,4 @@
+{% macro render_field(field) %}
+    {{ field.label(field.name.capitalize() + ':')}} <br>
+    {{ field(class_='form-control') | safe }} <br>
+{% endmacro %}
