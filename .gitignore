@@ -98,3 +98,4 @@ ENV/
 config.py
 *.xml
 .cache/
+static/screenshot
