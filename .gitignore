@@ -98,4 +98,6 @@ ENV/
 *.iml
 *.xml
 .cache/
-app/static/screenshot
+app/screenshot/
+app.db
+app.db-journal

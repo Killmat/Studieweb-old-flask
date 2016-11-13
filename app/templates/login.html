@@ -22,7 +22,19 @@
         <div id="login">
             <div id="loginform">
                 <a href="/"><img src="{{ url_for('static', filename='pics/banner.png') }}"></a>
-                <form method="post" action="/login">
+                <div class="alert alert-warning">
+                    {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                    <ul>
+                    {% for message in messages %}
+                        <li>{{ message }}</li>
+                    {% endfor %}
+                    </ul>
+                    {% endif %}
+                    {% endwith %}
+                </div>
+                <form method="post">
+                    {{ form.csrf_token }}
                     {{ render_field(form.username) }}
                     {{ render_field(form.password) }}
 

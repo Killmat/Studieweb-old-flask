@@ -17,8 +17,9 @@
             </div>
             {% for img in images %}
                 <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                    <a class="thumbnail" href="/static/screenshot/{{ img }}">
-                        <img class="img-responsive"  src="{{ url_for('static', filename='screenshot/' + img) }}"  style="height: 120px">
+                    <a class="thumbnail" href="{{ url_for('screenshot', filename=img) }}" style="text-align: center">
+                        <img class="img-responsive"  src="{{ url_for('screenshot', filename=img) }}"  style="height: 150px">
+                        {{ img }}
                     </a>
                 </div>
             {% endfor %}

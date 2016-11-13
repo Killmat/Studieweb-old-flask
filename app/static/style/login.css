@@ -22,6 +22,10 @@ html, body {
     display: block;
 }
 
+.alert {
+    height: 50px;
+}
+
 img {
     width: 100%;
     margin-bottom: 30px;
