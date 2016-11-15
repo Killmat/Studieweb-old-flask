@@ -9,6 +9,8 @@ body {
     display: -ms-flexbox;      /* TWEENER - IE 10 */
     display: -webkit-flex;     /* NEW - Chrome */
     display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    -webkit-justify-content: center;
+    -webkit-align-items: center;
     justify-content: center;
     align-items: center;
     background-image: linear-gradient(rgba(44,52,80,0.5), rgba(44,62,80,0.5)), url('/static/pics/jumbo-background.jpg');
@@ -28,8 +30,9 @@ body {
     height: 242px;
 }
 
-.caption > h3 {
+.caption > a > h3 {
     text-align: center;
+    color: #000000;
 }
 
 .caption-descriptor {
@@ -62,6 +65,12 @@ body {
 }
 
 @media (min-width:1281px) {
+    .jumbotron {
+        height: 650px;
+    }
+}
+
+@media (min-width:1600px) {
     .jumbotron {
         height: 800px;
     }

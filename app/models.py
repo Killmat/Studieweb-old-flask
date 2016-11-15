@@ -27,3 +27,14 @@ class User(db.Model):
 
     def __repr__(self):
         return '<User %r>' % self.username
+
+
+class Projects(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    filename = db.Column(db.String(128))
+    random_id = db.Column(db.String(6))
+    title = db.Column(db.String(256))
+    short_title = db.Column(db.String(64))
+
+    def __repr__(self):
+        return '<Project %r>' % self.title

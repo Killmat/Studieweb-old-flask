@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+{% block head %}
+{% endblock %}
+{% block content %}
+<p>Hej {{ g.user.username }}</p>
+<a href="{{ url_for('logout') }}">Logout</a>
+{% endblock %}

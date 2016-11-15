@@ -10,6 +10,8 @@ html, body {
     display: -ms-flexbox;      /* TWEENER - IE 10 */
     display: -webkit-flex;     /* NEW - Chrome */
     display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    -webkit-justify-content: center;
+    -webkit-align-items: center;
     justify-content: center;
     align-items: center;
 }
