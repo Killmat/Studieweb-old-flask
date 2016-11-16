@@ -1,7 +1,38 @@
 {% extends 'base.html' %}
 {% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='style/admin.css') }}">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
+<script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
 {% endblock %}
 {% block content %}
-<p>Hej {{ g.user.username }}</p>
-<a href="{{ url_for('logout') }}">Logout</a>
+<div class="row">
+    <div class="col-sm-3">
+        <div class="sidebar-nav" id="lol">
+            <div class="navbar navbar-default" role="navigation" id="sidebar">
+                <ul class="nav navbar-nav">
+                    <li><a href="#">Menu Item 1</a></li>
+                    <li><a href="#">Menu Item 2</a></li>
+                    <li><a href="#">Menu Item 3</a></li>
+                    <li><a href="#">Menu Item 4</a></li>
+                    <li><a href="#">Reviews <span class="badge">1,118</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-9">
+        <h1 class="page-header">Hej: {{ g.user.username }}</h1>
+
+        <textarea id="markdown-editor"></textarea>
+        <script>
+            var simplemde = new SimpleMDE({
+            autosave: {
+                enabled: true,
+                uniqueId: 'markdown-editor',
+                delay: 1000
+            }
+            });
+        </script>
+    </div>
+</div>
 {% endblock %}

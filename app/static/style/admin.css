@@ -1,0 +1,26 @@
+#lol {
+    padding-top: 111px; !important
+    max-width: 260px;
+}
+
+
+.sidebar-nav .navbar .navbar-collapse {
+padding: 0;
+max-height: none;
+}
+.sidebar-nav .navbar ul {
+float: none;
+display: block;
+}
+.sidebar-nav .navbar li {
+float: none;
+display: block;
+}
+.sidebar-nav .navbar li a {
+padding-top: 12px;
+padding-bottom: 12px;
+}
+
+#sidebar{
+    height: 100%; !important
+}

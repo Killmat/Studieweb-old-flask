@@ -4,34 +4,38 @@
     <link href="{{ url_for('static', filename='style/index.css') }}" rel="stylesheet">
 {% endblock %}
 
-{% block content %}
+{% block before_content %}
 <div class="jumbotron">
     <h1>Velkommen til mit studieweb!</h1>
 </div>
-<div class="container">
-    <div class="row">
-        <div class="col-lg-12">
-            <h1 class="page-header">Seneste projekter</h1>
-        </div>
-        {% for project in four_latest_projects %}
-        <div class="col-lg-3 col-md-6 col-xs-12 thumb">
-            <div class="caption">
-                <a href="{{ url_for('projects', random_id=project.random_id, project_short_title=project.short_title) }}"><h3>{{ project.title }}</h3></a>
-            </div>
-            <a class="thumbnail" href="{{ url_for('projects', random_id=project.random_id, project_short_title=project.short_title) }}">
-                <img class="img-responsive"  src="{{ url_for('static', filename='pics/placeholder.svg') }}">
-            </a>
-            <div class="caption caption-descriptor">
-                <p>{{ ipsum }}</p>
-                <p class="btn-center"><a href="{{ url_for('projects', random_id=project.random_id, project_short_title=project.short_title) }}" class="btn btn-primary" role="button">Læs mere</a></p>
-            </div>
-        </div>
-        {% endfor %}
+{% endblock %}
+
+{% block content %}
+
+
+
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">Seneste projekter</h1>
     </div>
-    <div class="row">
-        <div class="col-lg-12">
-            <h1 class="page-header">Blog</h1>
+    {% for project in four_latest_projects %}
+    <div class="col-lg-3 col-md-6 col-xs-12 thumb">
+        <div class="caption">
+            <a href="{{ url_for('projects', random_id=project.random_id, project_short_title=project.short_title) }}"><h3>{{ project.title }}</h3></a>
         </div>
+        <a class="thumbnail" href="{{ url_for('projects', random_id=project.random_id, project_short_title=project.short_title) }}">
+            <img class="img-responsive"  src="{{ url_for('static', filename='pics/placeholder.svg') }}">
+        </a>
+        <div class="caption caption-descriptor">
+            <p>{{ ipsum }}</p>
+            <p class="btn-center"><a href="{{ url_for('projects', random_id=project.random_id, project_short_title=project.short_title) }}" class="btn btn-primary" role="button">Læs mere</a></p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">Blog</h1>
     </div>
 </div>
 {% endblock %}
